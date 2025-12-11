@@ -1,0 +1,23 @@
+{% extends "_layout.html" %}
+{% load static %}
+
+{% block title %}Seed{% endblock %}
+
+{% block content %}
+<h1 class="display-4">Сідування: внесення початкових даних у базу</h1>
+<p>
+    Сідування(від англ seed - зерно) - початкова ініціалізація, внесення стартових
+    (початкових) даних від яких продовжується подальша робота системи.Широко вживається у криптографії(сідування ГПСЧ).У базах даних - це початкові ролі, зокрема, максимальна роль - адміністратор. 
+    А також початковий користувач-адміністратор, оскільки зміна ролей дозволяється тільки адміністратором, а значить десь повинний взятись перший такий користувач
+</p>
+<p>
+    Сідування зазвичай виконується один раз при старті проєкту, після чого
+    скрипти сідування видаляються з системи.
+</p>
+<button class="btn btn-danger" id="btn-seed">Seed</button>
+<h2>Тестування авторизованого режиму(токена)</h2>
+<button class="btn btn-warning" id="btn-auth-test">Auth</button>
+
+<button class="btn btn-warning" id="btn-auth-test-no-header">No-Header</button>
+<button class="btn btn-warning" id="btn-auth-test-invalid-scheme">Invalid Scheme</button>
+{% endblock %}
